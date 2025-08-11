@@ -1,7 +1,7 @@
 # NotesFlow
 
 **Version**: v0.0.0  
-**Live Demo**: [Coming Soon]()  
+**Live Demo**: [NotesFlow](https://notes-flow.vercel.app/)  
 
 A simple, secure web app for storing and managing your notes.
 
