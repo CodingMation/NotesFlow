@@ -58,7 +58,7 @@ export default function Notes() {
   };
 
   const handleEdit = (note) => {
-    console.log("Edit:", note);
+    // console.log("Edit:", note);
     setTitle(note.title);
     setContent(note.content);
     setEditingId(note._id);

@@ -15,7 +15,7 @@ export default function Register() {
     try {
       if (!username) throw new Error("Username is empty");
       if (!password) throw new Error("Password is empty");
-      console.log("Login:", username, password);
+      // console.log("Login:", username, password);
       setError("");
       await register(username, email, password);
     } catch (err) {

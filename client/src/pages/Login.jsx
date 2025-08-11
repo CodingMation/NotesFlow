@@ -14,7 +14,7 @@ export default function Login() {
     try {
       if(!email) throw new Error("email is empty"); 
       if(!password) throw new Error("Password is empty");
-      console.log("Login:", email, password);
+      // console.log("Login:", email, password);
       setError('');
       await login(email, password);
     } catch (err) {
