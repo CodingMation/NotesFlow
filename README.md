@@ -14,7 +14,7 @@ A simple, secure web app for storing and managing your notes.
 - **Login/Logout** - Secure authentication to protect your notes
 - **Persistent Sessions** - Stay logged in across browser sessions
 
-### 📝 Note Management
+### Note Management
 - **Create Notes** - Add new notes with titles and content
 - **View All Notes** - See your complete collection in one place
 - **Edit Notes** - Update existing notes anytime
@@ -29,7 +29,7 @@ A simple, secure web app for storing and managing your notes.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v14+ minimum, recommanded v20+)
