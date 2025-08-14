@@ -1,6 +1,6 @@
 # NotesFlow
 
-**Version**: v0.0.0  
+**Version**: v0.0.1
 
 **License**: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -24,6 +24,10 @@ A simple, secure web app for storing and managing your notes.
 - **Edit Notes** - Update existing notes anytime
 - **Delete Notes** - Remove notes you no longer need
 - **Automatic Saving** - Changes are saved instantly
+
+### About Section
+- **About NotesFlow** - Everything wants to know
+
 
 ### User Experience
 - **Clean Interface** - Focus on your content without distractions
