@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useAuth } from '../context/AuthContext';
 import notesflow from '../assets/notesflow.svg';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const { logout } = useAuth();
     const [profileMenuOpen, setProfileMenuOpen] = useState(false);
@@ -68,20 +69,20 @@ const Navbar = () => {
                             {profileMenuOpen && (
                                 <ul ref={dropdownRef} className="absolute right-[6%] mt-[25vh] w-40 bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden z-50">
                                     <li>
-                                        <a
-                                            href="/"
+                                        <Link
+                                            to="/"
                                             className="block px-4 py-2 hover:bg-gray-100 transition-colors"
                                         >
                                             Home
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
-                                            href="/about"
+                                        <Link
+                                            to="/about"
                                             className="block px-4 py-2 hover:bg-gray-100 transition-colors"
                                         >
                                             About
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
                                         <button
