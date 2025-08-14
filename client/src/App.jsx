@@ -35,8 +35,9 @@ function App() {
 }
 
 function PrivateRoute({ children }) {
-  const { currentUser } = useAuth();
-  return currentUser ? children : <Navigate to="/login" />;
+  const { currentUser, loading } = useAuth();
+  if (loading) return <div>Loading...</div>;
+  return currentUser ? children : <Navigate to="/login" replace />;
 }
 
 export default App;
