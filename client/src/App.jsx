@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Notes from './pages/Notes';
+import About from './pages/About';
 
 function App() {
   return (
@@ -16,6 +17,14 @@ function App() {
             element={
               <PrivateRoute>
                 <Notes />
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/about" 
+            element={
+              <PrivateRoute>
+                <About />
               </PrivateRoute>
             } 
           />

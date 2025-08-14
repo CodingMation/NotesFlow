@@ -19,6 +19,7 @@ export default function Login() {
       await login(email, password);
     } catch (err) {
       setError(err.message);
+      console.log("Error: ", err);
     }
   };
 

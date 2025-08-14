@@ -6,10 +6,9 @@ import NoteCard from "../components/NoteCard";
 import Data from "../utils/Data";
 import { useAuth } from "../context/AuthContext";
 import api from "../api/axios";
+import Navbar from "../components/Navbar";
 
 export default function Notes() {
-
-  const { logout } = useAuth();
 
   const [notes, setNotes] = useState([]);
   const [title, setTitle] = useState("");
@@ -18,11 +17,10 @@ export default function Notes() {
   const [showForm, setShowForm] = useState(false);
   const [viewNote, setViewNote] = useState(null);
 
-  const navigate = useNavigate();
 
-    useEffect(() => {
-      fetchNotes();
-    }, []);
+  useEffect(() => {
+    fetchNotes();
+  }, []);
 
   const fetchNotes = async () => {
     try {
@@ -75,31 +73,14 @@ export default function Notes() {
     } catch (err) {
       console.error(err);
     }
-  };  
-
-  const handleLogout = async () => await logout();
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 relative">
       {/* Navbar */}
-      <nav className="bg-blue-600 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <h1 className="text-xl font-bold text-white">NotesFlow</h1>
-            </div>
-            <div className="flex items-center">
-              <button
-                onClick={handleLogout}
-                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-gray-900 hover:bg-gray-100"
-              >
-                Logout
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+      <div className="sticky top-0 z-50">
+        <Navbar />
+      </div>
       {/* Notes Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {notes.length === 0 ? (

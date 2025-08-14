@@ -8,18 +8,19 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { register } = useAuth();
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       if (!username) throw new Error("Username is empty");
+      if (!email) throw new Error("Email is empty");
       if (!password) throw new Error("Password is empty");
-      // console.log("Login:", username, password);
+      console.log("Registering: ", username, email, password);
       setError("");
       await register(username, email, password);
     } catch (err) {
       setError(err.message);
+      console.log(err);
     }
   };
 
@@ -39,7 +40,7 @@ export default function Register() {
             <span className="block sm:inline">{error}</span>
           </div>
         )}
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+        <form className="mt-8 space-y-6" onSubmit={ handleSubmit }>
           <div className="rounded-md shadow-sm space-y-4">
             <div>
               <label htmlFor="username" className="sr-only">
